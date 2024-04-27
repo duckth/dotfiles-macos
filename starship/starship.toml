@@ -1,0 +1,121 @@
+command_timeout = 1000
+
+format = """
+
+$directory$git_branch$git_commit$git_state$git_metrics$git_status$status$ruby$nodejs
+[$shell](blue dimmed)$character"""
+right_format = "$kubernetes"
+
+[character]
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
+
+[shell]
+disabled = false
+powershell_indicator = "pwsh"
+
+[kubernetes]
+symbol = " "
+format = "[$symbol$context( | $namespace)](blue) "
+disabled = false
+
+[cmd_duration]
+disabled = true
+
+[hostname]
+ssh_symbol = " "
+format = "$ssh_symbol$hostname"
+disabled = false
+ssh_only = false
+
+[container]
+disabled = true
+
+[git_metrics]
+disabled = false
+
+[aws]
+symbol = "  "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = "⌘ "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[nodejs]
+symbol = " "
+
+[os]
+disabled = false
+
+[os.symbols]
+Arch = " "
+EndeavourOS = " "
+Linux = " "
+Manjaro = " "
+Mint = " "
+Ubuntu = " "
+Windows = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+detect_files = [".ruby-version"]
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
