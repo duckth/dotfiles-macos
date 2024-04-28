@@ -71,7 +71,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo zsh-autosuggestions rails)
+plugins=(git sudo fzf-tab zsh-autosuggestions zsh-syntax-highlighting rails kubectl)
+
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,6 +113,7 @@ eval "$(starship init zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-eval "$(rbenv init -)"
 eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 
+eval "$(/Users/duckth/.local/bin/mise activate zsh)"
