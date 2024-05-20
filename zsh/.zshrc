@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="$HOME/.local/bin/tools:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -74,6 +77,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git sudo fzf-tab zsh-autosuggestions zsh-syntax-highlighting rails kubectl)
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +111,8 @@ alias ll="lsd -lah"
 
 alias be="bundle exec"
 
+alias rc="bundle exec rails console -- --noautocomplete"
+
 alias lg="lazygit"
 
 eval "$(starship init zsh)"
@@ -117,3 +123,4 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 eval "$(/Users/duckth/.local/bin/mise activate zsh)"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
