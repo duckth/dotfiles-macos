@@ -1,14 +1,17 @@
 command_timeout = 1000
 
 format = """
-
-$directory$git_branch$git_commit$git_state$git_metrics$git_status$status$ruby$nodejs
+$directory$git_branch$git_commit$git_state$git_metrics$git_status$status$ruby$python$nodejs$bun
 [$shell](blue dimmed)$character"""
 right_format = "$kubernetes"
 
 [character]
 success_symbol = '[](bold green)'
 error_symbol = '[](bold red)'
+
+[username]
+format = '[$user]($style)@'
+show_always = false
 
 [shell]
 disabled = false
@@ -99,6 +102,11 @@ Manjaro = " "
 Mint = " "
 Ubuntu = " "
 Windows = " "
+Macos = " "
+
+[bun]
+symbol = " "
+style = 'bold yellow'
 
 [package]
 symbol = " "
