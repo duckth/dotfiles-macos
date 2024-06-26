@@ -7,6 +7,8 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export PATH="$HOME/.local/bin/tools:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
+export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview;x:preview-tui'
+export NNN_FIFO=/tmp/nnn.fifo
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -124,3 +126,7 @@ eval "$(zoxide init zsh)"
 
 eval "$(/Users/duckth/.local/bin/mise activate zsh)"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+autoload bashcompinit && bashcompinit
+source /opt/homebrew/etc/bash_completion.d/az
+

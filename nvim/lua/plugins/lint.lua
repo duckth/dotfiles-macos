@@ -4,7 +4,7 @@ return {
     opts = {
       linters_by_ft = {
         dockerfile = { "hadolint" },
-        ruby = { "rubocop" },
+        -- ruby = { "rubocop" },
       },
     },
   },

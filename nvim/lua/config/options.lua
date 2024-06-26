@@ -11,3 +11,5 @@ vim.o.foldenable = true
 
 -- fix for weird ruby indent thing
 vim.cmd([[autocmd FileType ruby setlocal indentkeys-=.]])
+
+vim.cmd("language en_US.utf-8")
