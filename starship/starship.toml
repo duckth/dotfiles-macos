@@ -3,7 +3,7 @@ command_timeout = 1000
 format = """
 $directory$git_branch$git_commit$git_state$git_metrics$git_status$status$ruby$python$nodejs$bun
 [$shell](blue dimmed)$character"""
-right_format = "$kubernetes"
+right_format = "$conda$kubernetes"
 
 [character]
 success_symbol = '[](bold green)'
@@ -20,6 +20,11 @@ powershell_indicator = "pwsh"
 [kubernetes]
 symbol = " "
 format = "[$symbol$context( | $namespace)](blue) "
+disabled = false
+
+[conda]
+symbol = "🅒 "
+format = "[$symbol$environment](bold green) "
 disabled = false
 
 [cmd_duration]
@@ -42,9 +47,6 @@ symbol = "  "
 
 [c]
 symbol = " "
-
-[conda]
-symbol = " "
 
 [dart]
 symbol = " "

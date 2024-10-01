@@ -122,11 +122,27 @@ eval "$(starship init zsh)"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
 
 eval "$(/Users/duckth/.local/bin/mise activate zsh)"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 autoload bashcompinit && bashcompinit
 source /opt/homebrew/etc/bash_completion.d/az
+
+eval "$(zoxide init zsh)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
