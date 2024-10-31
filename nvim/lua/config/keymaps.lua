@@ -39,3 +39,5 @@ map("n", "<Tab>", "<Cmd>Telescope buffers<CR>", { desc = "Show buffers (Telescop
 map("n", "<leader>.", "<Cmd>Telescope harpoon marks<CR>", { desc = "Show harpoon marks (Telescope)" })
 
 map("n", "<leader>e", "<Cmd>Neotree reveal<CR>", { desc = "NeoTree Reveal" })
+
+map("n", "<leader>o", "<Cmd>Oil<CR>", { desc = "Open Oil" })
