@@ -6,6 +6,8 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export PATH="$HOME/.local/bin/tools:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/share/android-commandlinetools/platform-tools:$PATH"
+export PATH="$HOME/.local/bin/flutter/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview;x:preview-tui'
 export NNN_FIFO=/tmp/nnn.fifo
@@ -124,7 +126,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 eval "$(fzf --zsh)"
 
 eval "$(/Users/duckth/.local/bin/mise activate zsh)"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 autoload bashcompinit && bashcompinit
 source /opt/homebrew/etc/bash_completion.d/az
