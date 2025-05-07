@@ -14,7 +14,7 @@ return {
       --     },
       --   },
       -- },
-      ruby_lsp = {},
+      crystalline = {},
     },
   },
 }

@@ -59,4 +59,32 @@ return {
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   },
+  {
+    "chrisgrieser/nvim-spider",
+    keys = {
+      {
+        "e",
+        "<cmd>lua require('spider').motion('e')<CR>",
+        mode = { "n", "o", "x" },
+      },
+      {
+        "w",
+        "<cmd>lua require('spider').motion('w')<CR>",
+        mode = { "n", "o", "x" },
+      },
+      {
+        "b",
+        "<cmd>lua require('spider').motion('b')<CR>",
+        mode = { "n", "o", "x" },
+      },
+    },
+  },
+  {
+    "marcussimonsen/let-it-snow.nvim",
+    cmd = "LetItSnow", -- Wait with loading until command is run
+    opts = {},
+  },
+  {
+    "vim-crystal/vim-crystal",
+  },
 }

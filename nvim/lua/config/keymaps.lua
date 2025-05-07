@@ -16,7 +16,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- select everything on ctrl + a
-map("n", "<C-A>", "ggVG", { desc = "Select everything" })
+-- map("n", "<C-A>", "ggVG", { desc = "Select everything" })
 
 -- end of line next to start of line
 map({ "n", "v" }, "+", "<End>", { desc = "End of line" })
@@ -40,4 +40,4 @@ map("n", "<leader>.", "<Cmd>Telescope harpoon marks<CR>", { desc = "Show harpoon
 
 map("n", "<leader>e", "<Cmd>Neotree reveal<CR>", { desc = "NeoTree Reveal" })
 
-map("n", "<leader>o", "<Cmd>Oil<CR>", { desc = "Open Oil" })
+map("n", "<leader>o", "<Cmd>Oil --float<CR>", { desc = "Open Oil" })

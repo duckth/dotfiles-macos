@@ -11,5 +11,9 @@ vim.o.foldenable = true
 
 -- fix for weird ruby indent thing
 vim.cmd([[autocmd FileType ruby setlocal indentkeys-=.]])
+vim.cmd([[autocmd FileType cpp setlocal shiftwidth=4]])
+vim.cmd([[autocmd FileType cpp setlocal tabstop=4]])
 
 vim.cmd("language en_US.utf-8")
+
+vim.g.lazyvim_ruby_lsp = "ruby_lsp"

@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export PATH="$HOME/.local/bin/tools:$PATH"
+export PATH="$HOME/.dotnet/tools:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/share/android-commandlinetools/platform-tools:$PATH"
 export PATH="$HOME/.local/bin/flutter/bin:$PATH"
@@ -78,7 +79,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo fzf-tab zsh-autosuggestions zsh-syntax-highlighting rails kubectl)
+plugins=(git sudo fzf-tab zsh-autosuggestions zsh-syntax-highlighting rails kubectl docker-compose)
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -148,3 +149,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH="/opt/homebrew/opt/dotnet@8/bin:$PATH"
+export DOTNET_ROOT="/opt/homebrew/opt/dotnet@8/libexec"
+
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/duckth/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
