@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 export PATH="$HOME/.local/bin/tools:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -126,7 +126,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 eval "$(fzf --zsh)"
 
-eval "$(/Users/duckth/.local/bin/mise activate zsh)"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 autoload bashcompinit && bashcompinit
@@ -158,3 +157,10 @@ fpath=(/Users/duckth/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+eval "$(/Users/duckth/.local/bin/mise activate zsh)"
+export PATH="/opt/homebrew/opt/gradle@7/bin:$PATH"
+
+# bun completions
+[ -s "/Users/duckth/.bun/_bun" ] && source "/Users/duckth/.bun/_bun"
+eval "$(ruby ~/.local/bin/try/try.rb init ~/src/tries)"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"

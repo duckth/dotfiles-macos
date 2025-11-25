@@ -21,22 +21,20 @@ end
 -- end of line next to start of line
 map({ "n", "v" }, "+", "<End>", { desc = "End of line" })
 
--- find files on ctrl + p
-map("n", "<C-P>", ":Telescope find_files<CR>", { desc = "Find files" })
-
 -- map comma to backtick so i can use precise marks
 map({ "n", "v" }, ",", "`", { desc = "Use backtick instead of comma" })
 -- map dash to tilde so i can use it
 map({ "n", "v" }, "-", "~", { desc = "Use dash instead of tilde" })
 
 -- recent files on ½
-map("n", "$", "<Cmd>Telescope oldfiles<CR>", { desc = "Show recent files (Telescope)" })
+map("n", "$", function()
+  Snacks.picker.recent()
+end, { desc = "Show recent files (Telescope)" })
 
 -- buffers on tab
-map("n", "<Tab>", "<Cmd>Telescope buffers<CR>", { desc = "Show buffers (Telescope)" })
-
--- map leader + dot to harpoon marks
-map("n", "<leader>.", "<Cmd>Telescope harpoon marks<CR>", { desc = "Show harpoon marks (Telescope)" })
+map("n", "<Tab>", function()
+  Snacks.picker.buffers()
+end, { desc = "Show buffers (Telescope)" })
 
 map("n", "<leader>e", "<Cmd>Neotree reveal<CR>", { desc = "NeoTree Reveal" })
 

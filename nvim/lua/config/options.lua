@@ -17,3 +17,6 @@ vim.cmd([[autocmd FileType cpp setlocal tabstop=4]])
 vim.cmd("language en_US.utf-8")
 
 vim.g.lazyvim_ruby_lsp = "ruby_lsp"
+
+-- disable yanking into system clipboard every time
+vim.opt.clipboard = ""

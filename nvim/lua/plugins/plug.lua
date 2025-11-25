@@ -56,7 +56,7 @@ return {
     ---@type oil.SetupOpts
     opts = {},
     -- Optional dependencies
-    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
     -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
   },
   {
@@ -86,5 +86,42 @@ return {
   },
   {
     "vim-crystal/vim-crystal",
+  },
+  {
+    "wilfreddenton/history.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      keybinds = {
+        back = "H",
+        forward = "L",
+        view = "<leader>bv",
+      },
+    },
+  },
+  {
+    "folke/sidekick.nvim",
+    opts = {
+      -- add any options here
+      cli = {
+        mux = {
+          backend = "tmux",
+          enabled = true,
+        },
+      },
+    },
+    keys = {
+      {
+        "<S-Tab>",
+        function()
+          if not require("sidekick").nes_jump_or_apply() then
+            return "<S-Tab>"
+          end
+        end,
+        expr = true,
+        desc = "Goto/Apply Next Edit Suggestion",
+      },
+    },
   },
 }
