@@ -1,0 +1,12 @@
+macos-titlebar-style = "hidden"
+macos-non-native-fullscreen = visible-menu
+fullscreen = true
+window-padding-y = 10,0
+font-size = 16.0
+
+cursor-text = "#000000"
+cursor-opacity = 0.8
+
+theme = "Gruvbox Dark"
+
+keybind = cmd+shift+r=reload_config
