@@ -12,6 +12,8 @@ export PATH="$HOME/.local/bin/flutter/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview;x:preview-tui'
 export NNN_FIFO=/tmp/nnn.fifo
+export PATH="/Users/duckth/.bun/bin:$PATH"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

@@ -10,3 +10,8 @@ cursor-opacity = 0.8
 theme = "Gruvbox Dark"
 
 keybind = cmd+shift+r=reload_config
+
+background = #1E2021
+background-opacity = 0.80
+background-blur = 0
+keybind = cmd+u=toggle_background_opacity

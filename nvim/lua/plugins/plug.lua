@@ -19,6 +19,15 @@ return {
         desc = "Find Files (hidden)",
       },
     },
+    opts = {
+      defaults = {
+        layout_strategy = "horizontal",
+        layout_config = {
+          prompt_position = "top",
+        },
+        sorting_strategy = "ascending",
+      },
+    },
   },
   {
     "nvim-neotest/neotest",
@@ -124,4 +133,21 @@ return {
       },
     },
   },
+  {
+    "folke/noice.nvim",
+    enabled = true,
+    opts = {
+      routes = {
+        {
+          filter = {
+            event = "lsp",
+            kind = "progress",
+            find = "pyright",
+          },
+          opts = { skip = true },
+        },
+      },
+    },
+  },
+  { "pfhawkins/nvmjml", ft = "mjml", config = true },
 }

@@ -66,7 +66,7 @@ outer.bottom = 0
 # outer.top = [{ monitor.main = 40}, 40]
 outer.top = [
   { monitor."built-in" = 0 }, # Matches MacBook screen (with the notch)
-  { monitor."main" = 45 },    # Applies to whichever display is currently "main"
+  { monitor."main" = 0 },     # Applies to whichever display is currently "main"
   45,                         # Fallback default for all others
 ]
 outer.right = 0
@@ -132,7 +132,6 @@ alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
 alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
 alt-t = 'workspace T'
 alt-f = 'workspace F'
 alt-m = 'workspace M'
@@ -146,7 +145,6 @@ alt-shift-3 = 'move-node-to-workspace 3'
 alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-t = 'move-node-to-workspace T'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
@@ -213,15 +211,14 @@ run = ['move-node-to-workspace S']
 if.app-id = 'com.microsoft.teams2'
 run = ['move-node-to-workspace T']
 
-
 # force certain workspaces to certain monitors
-# [workspace-to-monitor-force-assignment]
-# 1 = 'main'      # Monitor sequence number from left to right. 1-based indexing
-# 2 = 'main'      # Main monitor
-# 3 = 'main'      # Non-main monitor in case when there are only two monitors
-# 4 = 'main'      # Non-main monitor in case when there are only two monitors
-# 5 = 'main'
-# 6 = 'main'
-# 7 = 'main'
-# 8 = 'main'
-# 9 = 'secondary'
+[workspace-to-monitor-force-assignment]
+1 = 'main'      # Monitor sequence number from left to right. 1-based indexing
+2 = 'main'      # Main monitor
+3 = 'secondary' # Non-main monitor in case when there are only two monitors
+4 = 'secondary' # Non-main monitor in case when there are only two monitors
+5 = 'secondary'
+6 = 'secondary'
+M = 'secondary'
+S = 'secondary'
+9 = 'secondary'

@@ -27,14 +27,10 @@ map({ "n", "v" }, ",", "`", { desc = "Use backtick instead of comma" })
 map({ "n", "v" }, "-", "~", { desc = "Use dash instead of tilde" })
 
 -- recent files on ½
-map("n", "$", function()
-  Snacks.picker.recent()
-end, { desc = "Show recent files (Telescope)" })
+map("n", "$", "<Cmd> Telescope oldfiles<CR>", { desc = "Recent files (Telescope)" })
 
 -- buffers on tab
-map("n", "<Tab>", function()
-  Snacks.picker.buffers()
-end, { desc = "Show buffers (Telescope)" })
+map("n", "<Tab>", "<Cmd> Telescope buffers<CR>", { desc = "Buffers (Telescope)" })
 
 map("n", "<leader>e", "<Cmd>Neotree reveal<CR>", { desc = "NeoTree Reveal" })
 
