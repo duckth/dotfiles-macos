@@ -137,6 +137,7 @@ alt-f = 'workspace F'
 alt-m = 'workspace M'
 alt-o = 'workspace O'
 alt-s = 'workspace S'
+alt-c = 'workspace C'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -188,10 +189,6 @@ if.app-id = 'company.thebrowser.Browser'
 run = ['move-node-to-workspace 2']
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = ['move-node-to-workspace 5']
-
-[[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ['move-node-to-workspace F']
 
@@ -210,6 +207,10 @@ run = ['move-node-to-workspace S']
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
 run = ['move-node-to-workspace T']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = ['move-node-to-workspace C']
 
 # force certain workspaces to certain monitors
 [workspace-to-monitor-force-assignment]

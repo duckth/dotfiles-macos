@@ -168,3 +168,6 @@ export PATH="/opt/homebrew/opt/gradle@7/bin:$PATH"
 [ -s "/Users/duckth/.bun/_bun" ] && source "/Users/duckth/.bun/_bun"
 eval "$(ruby ~/.local/bin/try/try.rb init ~/src/tries)"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
+# opencode
+export PATH=/Users/duckth/.opencode/bin:$PATH
