@@ -1,9 +1,8 @@
 command_timeout = 1000
 
 format = """
-$directory$git_branch$git_commit$git_state$git_metrics$git_status$status$ruby$python$nodejs$bun
+$directory$git_branch$git_commit$git_state$git_metrics$git_status$status$ruby$python$nodejs$bun$dart
 [$shell](blue dimmed)$character"""
-right_format = "$conda$kubernetes"
 
 [character]
 success_symbol = '[](bold green)'
@@ -50,6 +49,7 @@ symbol = " "
 
 [dart]
 symbol = " "
+disabled = false
 
 [directory]
 read_only = " 󰌾"
@@ -128,4 +128,3 @@ symbol = " "
 
 [spack]
 symbol = "🅢 "
-
