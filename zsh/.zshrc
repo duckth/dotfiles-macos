@@ -13,8 +13,13 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview;x:preview-tui'
 export NNN_FIFO=/tmp/nnn.fifo
 export PATH="/Users/duckth/.bun/bin:$PATH"
+#export PATH="/Users/duckth/.local/bin/gradle-9.6.1/bin:$PATH"
+export PATH="$PATH:$HOME/fvm/default/bin"
+
 
 export CGO_CFLAGS="-DHAVE_STRCHRNUL"
+
+#export JAVA_HOME="/Users/duckth/.local/bin/jdk-25.jdk/Contents/Home"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -171,3 +176,4 @@ export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 
 # opencode
 export PATH=/Users/duckth/.opencode/bin:$PATH
+export PATH="/opt/homebrew/opt/openjdk@25/bin:$PATH"
