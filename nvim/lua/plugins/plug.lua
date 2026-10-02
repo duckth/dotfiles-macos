@@ -146,6 +146,14 @@ return {
           },
           opts = { skip = true },
         },
+        {
+          filter = {
+            event = "lsp",
+            kind = "progress",
+            find = "jdtls",
+          },
+          opts = { skip = true },
+        },
       },
     },
   },

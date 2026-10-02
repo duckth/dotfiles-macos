@@ -19,6 +19,8 @@ export PATH="$PATH:$HOME/fvm/default/bin"
 
 export CGO_CFLAGS="-DHAVE_STRCHRNUL"
 
+export SENTRY_HOST="https://sentry.last.dk"
+
 #export JAVA_HOME="/Users/duckth/.local/bin/jdk-25.jdk/Contents/Home"
 
 
@@ -177,3 +179,6 @@ export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 # opencode
 export PATH=/Users/duckth/.opencode/bin:$PATH
 export PATH="/opt/homebrew/opt/openjdk@25/bin:$PATH"
+
+# sentry
+fpath=("/Users/duckth/.local/share/zsh/site-functions" $fpath)
