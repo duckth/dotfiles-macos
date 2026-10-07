@@ -7,9 +7,18 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
+    "context": "Picker",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      // "shift shift": "file_finder::Toggle",
+      // "j": "menu::SelectNext"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "tab": "tab_switcher::OpenInActivePane",
+      "space g g": "git::Branch",
+      "space space": "file_finder::Toggle"
     },
   },
   {
